@@ -1,2 +1,2 @@
 # calculator
-Simple webpage calculator, with glass design.
+Simple webpage calculator, using glass design.
