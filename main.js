@@ -28,6 +28,20 @@ function divide (x, y) {
 }
 
 // operate function which takes two numbers and an operator (above)
-function operate ([...arg]) {
-    if ([...arg].includes())
+function operate (...arr) {
+    let x = arr[0];
+    let y = arr[2];
+
+        if (arr[1] == "-") {
+            return subtract(x, y);
+        
+        } else if (arr[1] == "+") {
+            return add(x, y);
+        
+        } else if (arr[1] == '*') {
+            return multiply(x, y)
+        
+        } else if (arr[1] == '/') {
+            return divide(x, y);
+        };
 }
