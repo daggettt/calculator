@@ -5,12 +5,15 @@
 main {
     background: linear-gradient(to right top, #9999ff,#ccd9ff );
     min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 div, #calDisplay {
     font-family: monospace;
     font-size: 15;
 }
 .container {
+    margin: auto;
     background: white;
     min-height: 400px;
     width: 300px;

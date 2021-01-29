@@ -59,7 +59,6 @@ function removeNum () {
     arr.pop();
     return display.textContent = arr.join(' ');
 }
-
 //function for clearing the calculator's display, and for clearing the array.
 function clearDisplay () {
     let end = arr.length;
