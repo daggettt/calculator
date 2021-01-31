@@ -1,21 +1,11 @@
 const display = document.getElementById("calDisplay");
-const equal = document.getElementById("clear");
+const equal = document.getElementById("equal");
 
 const arr = [];
 
-function addtoArray (num) {
-    
-    arr.push(num);
-    display.textContent = arr.join(' ');
-    console.log(arr);
-}
-
-// basic calculator functions:
 // addition
 function add (x, y) {
     let sum = x + y;
-    // for several values in an array
-    // let sum = [...arg].reduce((a,b) => a + b, 0);
     return sum;
 }
 // subtraction
@@ -26,8 +16,6 @@ function subtract (x, y) {
 //multiplication
 function multiply (x, y) {
     let product = x * y;
-    // for several values in an array
-    // let product = [...arg].reduce((product, x) => product * x, 1);
     return product;
 }
 // division
@@ -36,12 +24,15 @@ function divide (x, y) {
     return div;
 }
 // operate function which takes two numbers and an operator (above)
-function operate (...arr) {
+
+function operate (arr) {
     let x = arr[0];
     let y = arr[2];
-
+    console.log(arr);
         if (arr[1] == "-") {
-            return subtract(x, y);
+            console.log('test');
+            arr = subtract(x, y);
+            display.textContent = arr;
         
         } else if (arr[1] == "+") {
             return add(x, y);
@@ -52,7 +43,21 @@ function operate (...arr) {
         } else if (arr[1] == '/') {
             return divide(x, y);
         };
+    
+    
+    //arr is only returning the full display array, not calculating
 }
+
+//function that onclick adds value to array.
+function addtoArray (num) {
+    arr.push(num);
+    display.textContent = arr.join(' ');
+    console.log(arr);
+}
+
+// equal.addEventListener = (onclick, function() {
+//      operate(display.textContent);
+// });
 
 //function for removing the last item of the array.
 function removeNum () {
