@@ -1,52 +1,89 @@
 const display = document.getElementById("calDisplay");
 const equal = document.getElementById("equal");
+const operator = document.querySelectorAll(".operator");
+const value = document.querySelectorAll(".value");
 
 const arr = [];
 
-// addition
 function add (x, y) {
     let sum = x + y;
     return sum;
 }
-// subtraction
 function subtract (x, y) {
     let sub = x - y;
     return sub;
 }
-//multiplication
 function multiply (x, y) {
     let product = x * y;
     return product;
 }
-// division
 function divide (x, y) {
     let div = x / y;
     return div;
 }
+
 // operate function which takes two numbers and an operator (above)
 
 function operate (arr) {
     let x = arr[0];
     let y = arr[2];
-    console.log(arr);
+    
         if (arr[1] == "-") {
-            console.log('test');
             arr = subtract(x, y);
             display.textContent = arr;
         
         } else if (arr[1] == "+") {
-            return add(x, y);
+            arr = add(x, y);
+            display.textContent = arr;
         
         } else if (arr[1] == '*') {
-            return multiply(x, y);
+            arr = multiply(x, y);
+            display.textContent = arr;
         
         } else if (arr[1] == '/') {
-            return divide(x, y);
+            arr = divide(x, y);
+            display.textContent = arr;
         };
-    
-    
-    //arr is only returning the full display array, not calculating
+ }       
+            
+            
+// function operate (arr) {
+//     let i = 0;
+//     let newarr = arr.slice(i, 3);
+//         let x = newarr[0];
+//         let y = newarr[2];
+                
+//             if (newarr[1] == "-") {
+//                 newarr = subtract(x, y);
+//                 console.log(newarr);
+                    
+//             } else if (newarr[1] == "+") {
+//                 newarr = add(x, y);
+//                 console.log(newarr);
+                    
+//             } else if (newarr[1] == '*') {
+//                 newarr = multiply(x, y);
+//                 console.log(newarr);
+                    
+//             } else if (newarr[1] == '/') {
+//                 newarr = divide(x, y);
+//                 console.log(newarr);
+//                 };
+//         }
+                
+function calculate (arr) {
+    for(i = 0; i < arr.length; i++) {
+        let newarr = arr.slice(i, 3);
+        operate(newarr);
+        
+        
+       console.log(arr.splice(0, 3, newarr));
+        
+    };
+        
+        
 }
+
 
 //function that onclick adds value to array.
 function addtoArray (num) {
@@ -54,10 +91,6 @@ function addtoArray (num) {
     display.textContent = arr.join(' ');
     console.log(arr);
 }
-
-// equal.addEventListener = (onclick, function() {
-//      operate(display.textContent);
-// });
 
 //function for removing the last item of the array.
 function removeNum () {
