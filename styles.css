@@ -1,67 +1,72 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: monospace;
+    font-size: 15px;
 }
 main {
-    background: linear-gradient(to right top, #9999ff,#ccd9ff );
+    background: linear-gradient(to right top, #6666ff, #809fff);
     min-height: 100vh;
     display: flex;
     align-items: center;
 }
-div, #calDisplay {
-    font-family: monospace;
-    font-size: 15;
+button {
+    border: none;
+    border-radius: 7%;
+    outline: none;
 }
 .container {
     margin: auto;
-    background: white;
     min-height: 400px;
     width: 300px;
-    /* background: linear-gradient(to right bottom, 
-                                rgba(255, 255, 255, 0.8),
-                                rgba(255, 255, 255, 0.2));*/
-    display: grid; 
+    display: grid;
     grid-template-rows: 1fr 5fr;
     border-radius: 12px;
-}
-.display {
-    background: #9999ff;
-    margin: 15px;
-    margin-bottom: 0px;
+    background: white;
 }
 #calDisplay {
     text-align: center;
     padding: 15px;
+    background: #9999ff;
+    width: auto;
+    height: 30%;
+    margin: 12px;
+    margin-bottom: 0px;
+    outline: none;
+    border: none;
+    border-radius: 2px; 
 }
-.keypad {
+#keypad {
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-gap: 15px;
-    margin: 15px;
+    margin: 10px;
 }
 #zero {
     grid-column-start: 1;
     grid-column-end: 3;
-} 
+}
 #equal {
     grid-column-start: 4;
     grid-row-start: 4;
     grid-row-end: 6;
-    padding-top: 45px;
-}
-.keypad > div {
-    padding: 2px;
-    border-radius: 7%;
-    text-align: center;
-    padding-top: 15px;
 }
 .operator {
     background: #e699ff;
 }
-.value, #zero {
+.operator:hover {
+    background-color: #d966ff;
+}
+.value, #zero, #decimal {
     background: #9999ff;
+}
+.value:hover, #zero:hover, #decimal:hover {
+    background-color: #6666ff;
 }
 #equal, #clear, #delete {
     background: #ffcc99;
+}
+#equal:hover, #clear:hover, #delete:hover {
+    background-color: #ffb366;
 }

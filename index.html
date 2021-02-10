@@ -9,28 +9,28 @@
 <body>
     <main>
         <container class="container">
-            <div id="display" class="display">
-                <h3 id="calDisplay"></h3>
+            <div id="display">
+                <div id="calDisplay" value=""></div>
             </div>
-            <div id="keypad" class="keypad">
-                <div id="clear" class="clear" onclick="clearDisplay()">clear</div>
-                <div id="delete" class="delete" onclick="removeNum()">delete</div>
-                <div id="/" class="operator" onclick="addtoArray('/')">/</div>
-                <div id="x"class="operator" onclick="addtoArray('*')">x</div>
-                <div id="7"class="value" onclick="addtoArray(7)">7</div>
-                <div id="8"class="value" onclick="addtoArray(8)">8</div>
-                <div id="9"class="value" onclick="addtoArray(9)">9</div>
-                <div id="+" class="operator" onclick="addtoArray('+')">+</div>
-                <div id="4"class="value" onclick="addtoArray(4)">4</div>
-                <div id="5"class="value" onclick="addtoArray(5)">5</div>
-                <div id="6"class="value" onclick="addtoArray(6)">6</div>
-                <div id="-" class="operator" onclick="addtoArray('-')">-</div>
-                <div id="1" class="value" onclick="addtoArray(1)">1</div>
-                <div id="2" class="value" onclick="addtoArray(2)">2</div>
-                <div id="3" class="value" onclick="addtoArray(3)">3</div>
-                <div id="equal" class="equal" onclick="calculate(arr)">=</div>
-                <div id="zero" class="value" onclick="addtoArray(0)">0</div>
-                <div id="decimal" class="value" onclick="addtoArray('.')">.</div>
+            <div id="keypad">
+                <button id="clear" class="clear" type="button" value="clear">clear</button>
+                <button id="delete" class="delete" type="button" value="delete">delete</button>
+                <button id="/" class="operator" type="button" value="/">&divide;</button>
+                <button id="x" class="operator" type="button" value="x">&times;</button>
+                <button id="7" class="value" type="button" value="7">7</button>
+                <button id="8" class="value" type="button" value="8">8</button>
+                <button id="9" class="value" type="button" value="9">9</button>
+                <button id="+" class="operator" type="button" value="+">&plus;</button>
+                <button id="4" class="value" type="button" value="4">4</button>
+                <button id="5" class="value" type="button" value="5">5</button>
+                <button id="6" class="value" type="button" value="6">6</button>
+                <button id="-" class="operator" type="button" value="-">&minus;</button>
+                <button id="1" class="value" type="button" value="1">1</button>
+                <button id="2" class="value" type="button" value="2">2</button>
+                <button id="3" class="value" type="button" value="3">3</button>
+                <button id="equal" class="equal" type="button" value="=">&equals;</button>
+                <button id="zero" class="value" type="button" value="0">0</button>
+                <button id="decimal" class="decimal" type="button" value=".">.</button>
             </div>
         </container>
     </main>
