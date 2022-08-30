@@ -5,7 +5,7 @@
     font-size: 15px;
 }
 main {
-    background: linear-gradient(to right top, #6666ff, #809fff);
+    background: linear-gradient(to right top, #6666ff, #9fafdf);
     min-height: 100vh;
     display: flex;
     align-items: center;
